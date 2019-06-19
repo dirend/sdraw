@@ -1,6 +1,6 @@
 INCLUDEPATH *= $$PWD/src
 INCLUDEPATH += $$PWD/../
-
+INCLUDEPATH *= $$PWD/../common/src/
 include($$PWD/../zooming/zooming.pri)
 
 PROJNAME = $$basename(PWD)   

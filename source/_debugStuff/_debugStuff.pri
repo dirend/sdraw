@@ -7,7 +7,7 @@ BASENAME = $$PROJNAME
 TEMPDIR = $$PWD/tmp
 LIBDIR  = lib
 
-equals(TEMPLATE, "app") | equals(TEMPLATE, "vcapp") {
+#equals(TEMPLATE, "app") | equals(TEMPLATE, "vcapp") {
   build_pass:CONFIG(debug, debug|release) {
     win32:LIBNAME = $$join(BASENAME,,,d.lib)
   } else {
@@ -19,4 +19,4 @@ equals(TEMPLATE, "app") | equals(TEMPLATE, "vcapp") {
   LIBS *= $$LIBNAME                          
   DEPENDPATH *= $$PWD/src
   LIBNAME = ""  # just to be safe
-}
+#}

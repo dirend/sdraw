@@ -73,7 +73,8 @@ CMainWindow::CMainWindow(QWidget *parent)
    initMainFrame();
    initToolBars();
    initFinal();
-   toLog(QString("Ready"));
+   auto s = QString("Ready");
+   toLog(s);
 }
 
 CMainWindow::~CMainWindow()

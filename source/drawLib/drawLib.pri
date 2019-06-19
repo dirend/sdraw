@@ -1,5 +1,13 @@
 INCLUDEPATH *= $$PWD/src
 INCLUDEPATH += $$PWD/../
+INCLUDEPATH *= $$PWD/../_debugStuff/src/
+INCLUDEPATH *= $$PWD/../drawCommands/src/
+INCLUDEPATH *= $$PWD/../algorithms/src/
+INCLUDEPATH *= $$PWD/../sdrawWidgets/src/
+INCLUDEPATH *= $$PWD/../selectionLib/src/
+INCLUDEPATH *= $$PWD/../zooming/src/
+
+
 include($$PWD/../common/common.pri)
 include($$PWD/../drawSettings/drawSettings.pri)
 

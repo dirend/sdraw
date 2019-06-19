@@ -18,7 +18,7 @@ include($$PWD/../zooming/zooming.pri)
 include($$PWD/../drawLib/drawLib.pri)
 include($$PWD/../drawCommands/drawCommands.pri)
 include($$PWD/../drawSettings/drawSettings.pri)
-include($$PWD/../_debugStuff/_debugStuff.pri)
+#include($$PWD/../_debugStuff/_debugStuff.pri)
 
 build_pass:CONFIG(debug, debug|release) 
 {

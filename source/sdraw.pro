@@ -10,5 +10,6 @@ drawboard \
 drawCommands \
 selectionLib \
 _desktop \
+_debugstuff
 
 CONFIG  += ordered

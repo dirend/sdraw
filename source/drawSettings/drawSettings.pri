@@ -1,5 +1,6 @@
 INCLUDEPATH *= $$PWD/src
 INCLUDEPATH += $$PWD/../
+INCLUDEPATH *= $$PWD/../common/src/
 
 PROJNAME = $$basename(PWD)   
 BASENAME = $$PROJNAME        

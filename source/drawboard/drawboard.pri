@@ -1,4 +1,6 @@
 INCLUDEPATH *= $$PWD/src
+INCLUDEPATH *= $$PWD/../_debugStuff/src/
+INCLUDEPATH *= $$PWD/../drawCommands/src/
 INCLUDEPATH += $$PWD/../
 include($$PWD/../common/common.pri)
 include($$PWD/../algorithms/algorithms.pri)

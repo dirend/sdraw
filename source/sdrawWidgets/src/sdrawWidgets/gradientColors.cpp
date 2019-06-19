@@ -421,7 +421,8 @@ void CGradientColors::newFocusColor(const QColor &col, int index)
    connect(alphaSpinbox, SIGNAL(valueChanged(int)),
       this, SLOT(alphaChanged(int)));
 
-   QMutableHashIterator<int, GradientArrow> it(colorView->arrows());
+   auto hash = colorView->arrows();
+   QMutableHashIterator<int, GradientArrow> it(hash);
    while (it.hasNext())
    {
       it.next();

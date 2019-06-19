@@ -253,8 +253,9 @@ bool Zoomer::zoomInFromZoomedIn()
       backTracedSize = m_zoomParameters->minSource();
    }
 
+   auto zoomCenter = m_zoomParameters->zoomCenter();
    QPoint newZoomCorner = mapToZoomedInRect_upperLeftCorner(
-      m_zoomParameters->zoomCenter(),
+      zoomCenter,
       backTracedSize
       );
    m_zoomParameters->setzoomCorner(newZoomCorner);
@@ -319,9 +320,10 @@ bool Zoomer::zoomOutFromZoomedIn()
       m_zoomSources.size() - 1
       );
 
+   auto zoomCenter = m_zoomParameters->zoomCenter();
    m_zoomParameters->setzoomCorner(
       mapToZoomedInRect_upperLeftCorner(
-      m_zoomParameters->zoomCenter(),
+      zoomCenter,
       backTracedSize)
       );
 

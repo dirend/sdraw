@@ -1218,7 +1218,8 @@ void CSelectionKeeper::updateAllSelections()
       {
          continue;
       }
-      currSel->updateContent(m_buffer, &currSel->getWorldContentRect());
+      auto rct = currSel->getWorldContentRect();
+      currSel->updateContent(m_buffer, &rct);
    }
    currSel = 0;
 
@@ -1230,7 +1231,8 @@ void CSelectionKeeper::updateAllSelections()
       {
          continue;
       }
-      currPoly->updateContent(m_buffer, &currPoly->getWorldPolygon().boundingRect());
+      auto rct = currPoly->getWorldPolygon().boundingRect();
+      currPoly->updateContent(m_buffer, &rct);
    }
    currPoly = 0;
 }
@@ -1285,9 +1287,10 @@ void CSelectionKeeper::doTransformRect(const QPoint &pt)
       qreal rot_x = currSel->getAccumRotation_x();
       qreal rot_y = currSel->getAccumRotation_y();
       qreal rot_z = currSel->getAccumRotation_z();
+      auto rct = currSel->getContentPixmap()->rect();
       if (!handleTransform(pressPoint,
          pt,
-         currSel->getContentPixmap()->rect(),
+         rct,
          transformPt,
          currSel->getLastTransform(),
          rot_x,
@@ -1362,9 +1365,10 @@ void CSelectionKeeper::doTransformPolygon(const QPoint &pt)
       qreal rot_x = currSel->getAccumRotation_x();
       qreal rot_y = currSel->getAccumRotation_y();
       qreal rot_z = currSel->getAccumRotation_z();
+      auto rct = currSel->getContentPixmap()->rect();
       if (!handleTransform(pressPoint,
          pt,
-         currSel->getContentPixmap()->rect(),
+         rct,
          transformPt,
          currSel->getLastTransform(),
          rot_x,
